@@ -162,6 +162,7 @@
   </ContentWrap>
 </template>
 <script lang="ts" setup>
+import { ElMessageBox } from 'element-plus'
 import { BpmProcessInstanceStatus } from '@/utils/constants'
 import { DICT_TYPE, getIntDictOptions } from '@/utils/dict'
 import { dateFormatter } from '@/utils/formatTime'

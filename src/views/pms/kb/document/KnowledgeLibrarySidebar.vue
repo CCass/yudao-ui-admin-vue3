@@ -137,6 +137,7 @@
 </template>
 
 <script lang="ts" setup>
+import type { TreeInstance } from 'element-plus'
 import {
   getKnowledgeTreeNodeIcon,
   type KnowledgeContentView,
@@ -159,7 +160,7 @@ const props = defineProps<{
   canCreateDocument: boolean
 }>() // 组件参数
 const emit = defineEmits(['home', 'create', 'node-click', 'node-action', 'recycle']) // 组件事件
-const treeRef = ref<InstanceType<typeof ElTree>>() // 目录树 Ref
+const treeRef = ref<TreeInstance>() // 目录树 Ref
 
 const defaultExpandedNodeKeys = computed(() => (props.currentNodeKey ? [props.currentNodeKey] : [])) // 默认展开当前内容的目录链路
 
